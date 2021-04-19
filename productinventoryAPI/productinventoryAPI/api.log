@@ -1,0 +1,572 @@
+2021-04-19 13:52:29.097  INFO 29152 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 29152 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 13:52:29.126  INFO 29152 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 13:52:30.771  INFO 29152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 13:52:30.913  INFO 29152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129ms. Found 1 repository interfaces.
+2021-04-19 13:52:31.736  INFO 29152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e73e1c58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 13:52:37.964  INFO 29152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 13:52:38.001  INFO 29152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 13:52:38.002  INFO 29152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 13:52:38.017  INFO 29152 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 13:52:38.306  INFO 29152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 13:52:38.307  INFO 29152 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9073 ms
+2021-04-19 13:52:38.385  INFO 29152 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 13:52:38.385  INFO 29152 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 13:52:38.386  INFO 29152 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 13:52:38.386  INFO 29152 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 13:52:38.386  INFO 29152 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 13:52:38.387  INFO 29152 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 13:52:38.606  INFO 29152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 13:52:38.851  INFO 29152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 13:52:38.961  INFO 29152 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 13:52:39.106  INFO 29152 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 13:52:39.108  INFO 29152 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 13:52:39.353  INFO 29152 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 13:52:39.606  INFO 29152 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 13:52:39.942  WARN 29152 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+2021-04-19 13:52:39.943  INFO 29152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-19 13:52:39.947  INFO 29152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-19 13:52:39.951  INFO 29152 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-19 13:52:39.978  INFO 29152 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-19 13:52:39.988 ERROR 29152 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$102.0000000012D03710.getObject(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at productinventoryAPI.ProductInventoryApplication.main(ProductInventoryApplication.java:11) [classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 17 common frames omitted
+Caused by: org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:486) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:453) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.Property.isValid(Property.java:226) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:624) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 21 common frames omitted
+
+2021-04-19 13:54:51.887  INFO 23712 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 23712 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 13:54:51.893  INFO 23712 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 13:54:53.606  INFO 23712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 13:54:53.723  INFO 23712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 1 repository interfaces.
+2021-04-19 13:54:54.599  INFO 23712 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4b31d87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 13:55:00.739  INFO 23712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 13:55:00.775  INFO 23712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 13:55:00.776  INFO 23712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 13:55:00.789  INFO 23712 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 13:55:01.044  INFO 23712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 13:55:01.045  INFO 23712 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9054 ms
+2021-04-19 13:55:01.124  INFO 23712 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 13:55:01.125  INFO 23712 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 13:55:01.126  INFO 23712 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 13:55:01.126  INFO 23712 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 13:55:01.127  INFO 23712 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 13:55:01.127  INFO 23712 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 13:55:01.317  INFO 23712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 13:55:01.555  INFO 23712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 13:55:01.657  INFO 23712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 13:55:01.777  INFO 23712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 13:55:01.779  INFO 23712 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 13:55:02.043  INFO 23712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 13:55:02.297  INFO 23712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 13:55:02.624  WARN 23712 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+2021-04-19 13:55:02.625  INFO 23712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-19 13:55:02.633  INFO 23712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-19 13:55:02.638  INFO 23712 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-19 13:55:02.670  INFO 23712 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-19 13:55:02.679 ERROR 23712 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1745) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$102.0000000011F14D90.getObject(Unknown Source) ~[na:na]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1083) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:853) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at productinventoryAPI.ProductInventoryApplication.main(ProductInventoryApplication.java:11) [classes/:na]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1741) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 17 common frames omitted
+Caused by: org.hibernate.MappingException: Could not determine type for: productinventoryAPI.Category, at table: products, for columns: [org.hibernate.mapping.Column(category)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:486) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:453) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.Property.isValid(Property.java:226) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:624) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:347) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:466) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 21 common frames omitted
+
+2021-04-19 14:01:10.333  INFO 27748 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 27748 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 14:01:10.339  INFO 27748 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 14:01:11.717  INFO 27748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 14:01:11.828  INFO 27748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99ms. Found 1 repository interfaces.
+2021-04-19 14:01:12.553  INFO 27748 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f9dfbc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 14:01:18.565  INFO 27748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 14:01:18.594  INFO 27748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 14:01:18.595  INFO 27748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 14:01:18.611  INFO 27748 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 14:01:18.876  INFO 27748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 14:01:18.877  INFO 27748 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8444 ms
+2021-04-19 14:01:18.952  INFO 27748 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 14:01:18.953  INFO 27748 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 14:01:18.954  INFO 27748 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 14:01:18.954  INFO 27748 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 14:01:18.954  INFO 27748 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 14:01:18.955  INFO 27748 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 14:01:19.139  INFO 27748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 14:01:19.359  INFO 27748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 14:01:19.500  INFO 27748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 14:01:19.650  INFO 27748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 14:01:19.654  INFO 27748 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 14:01:19.916  INFO 27748 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 14:01:20.249  INFO 27748 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 14:01:21.471  INFO 27748 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3ab65cfe'
+2021-04-19 14:01:21.477  INFO 27748 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-19 14:01:22.426  INFO 27748 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bcd3d9d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@eb2c96ff, org.springframework.security.web.header.HeaderWriterFilter@e03d676, org.springframework.security.web.authentication.logout.LogoutFilter@c8913102, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@49147081, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c00b70c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@99435036, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@85cf25c, org.springframework.security.web.session.SessionManagementFilter@4b330ca7, org.springframework.security.web.access.ExceptionTranslationFilter@9e1fa4c2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@85756e3f]
+2021-04-19 14:01:22.745  INFO 27748 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 14:01:22.837  WARN 27748 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 14:01:23.261  INFO 27748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9432 (http) with context path ''
+2021-04-19 14:01:23.265  INFO 27748 --- [main] p.ProductInventoryApplication            : Started ProductInventoryApplication in 13.601 seconds (JVM running for 14.939)
+2021-04-19 14:14:32.452  INFO 27748 --- [http-nio-9432-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 14:14:32.454  INFO 27748 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-19 14:14:32.488  INFO 27748 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 34 ms
+2021-04-19 14:14:32.605  WARN 27748 --- [http-nio-9432-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2021-04-19 14:14:38.064  INFO 27748 --- [http-nio-9432-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-04-19 14:28:05.280  INFO 16036 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 16036 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 14:28:05.290  INFO 16036 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 14:28:06.651  INFO 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 14:28:06.766  INFO 16036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 1 repository interfaces.
+2021-04-19 14:28:07.534  INFO 16036 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4fc417ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 14:28:13.559  INFO 16036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 14:28:13.590  INFO 16036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 14:28:13.591  INFO 16036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 14:28:13.604  INFO 16036 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 14:28:13.891  INFO 16036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 14:28:13.892  INFO 16036 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8503 ms
+2021-04-19 14:28:13.968  INFO 16036 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 14:28:13.969  INFO 16036 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 14:28:13.969  INFO 16036 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 14:28:13.969  INFO 16036 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 14:28:13.970  INFO 16036 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 14:28:13.970  INFO 16036 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 14:28:14.161  INFO 16036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 14:28:14.369  INFO 16036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 14:28:14.461  INFO 16036 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 14:28:14.575  INFO 16036 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 14:28:14.577  INFO 16036 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 14:28:14.818  INFO 16036 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 14:28:15.061  INFO 16036 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 14:28:16.118  INFO 16036 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@ebde79f7'
+2021-04-19 14:28:16.123  INFO 16036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-19 14:28:17.045  INFO 16036 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64ebc3a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@76c2a70, org.springframework.security.web.header.HeaderWriterFilter@62cec9f4, org.springframework.security.web.authentication.logout.LogoutFilter@8e3ca17, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@eb09c23c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b81797e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bd4fc572, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@255f7b6f, org.springframework.security.web.session.SessionManagementFilter@529515be, org.springframework.security.web.access.ExceptionTranslationFilter@63b03c4d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8d92a92c]
+2021-04-19 14:28:17.370  INFO 16036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 14:28:17.471  WARN 16036 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 14:28:17.908  INFO 16036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9432 (http) with context path ''
+2021-04-19 14:28:17.912  INFO 16036 --- [main] p.ProductInventoryApplication            : Started ProductInventoryApplication in 13.337 seconds (JVM running for 14.655)
+2021-04-19 14:28:30.929  INFO 16036 --- [http-nio-9432-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 14:28:30.932  INFO 16036 --- [http-nio-9432-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-19 14:28:30.955  INFO 16036 --- [http-nio-9432-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2021-04-19 14:28:53.393  WARN 16036 --- [http-nio-9432-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `productinventoryAPI.Category` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('FASHION'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `productinventoryAPI.Category` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('FASHION')
+ at [Source: (PushbackInputStream); line: 5, column: 14] (through reference chain: productinventoryAPI.Product["category"])]
+2021-04-19 14:31:14.800  WARN 16036 --- [http-nio-9432-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `productinventoryAPI.Category` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('FASHION'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `productinventoryAPI.Category` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('FASHION')
+ at [Source: (PushbackInputStream); line: 5, column: 14] (through reference chain: productinventoryAPI.Product["category"])]
+2021-04-19 14:39:10.305 ERROR 16036 --- [http-nio-9432-exec-7] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category]
+2021-04-19 14:39:10.338 ERROR 16036 --- [http-nio-9432-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category] with root cause
+
+org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category
+	at org.hibernate.engine.spi.CascadingActions$8.noCascade(CascadingActions.java:380) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:159) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:150) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:83) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:38) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at productinventoryAPI.ProductServiceImpl$$EnhancerBySpringCGLIB$$4f4c0888.createProduct(<generated>) ~[classes/:na]
+	at productinventoryAPI.ProductController.addProduct(ProductController.java:64) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90) ~[na:1.8.0]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55) ~[na:1.8.0]
+	at java.lang.reflect.Method.invoke(Method.java:508) ~[na:1.8.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [na:1.8.0]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:812) [na:2.9 (12-19-2018)]
+
+2021-04-19 14:40:20.047 ERROR 16036 --- [http-nio-9432-exec-8] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category]
+2021-04-19 14:40:20.053 ERROR 16036 --- [http-nio-9432-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category] with root cause
+
+org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : productinventoryAPI.Product.category -> productinventoryAPI.Category
+	at org.hibernate.engine.spi.CascadingActions$8.noCascade(CascadingActions.java:380) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:159) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:150) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:83) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:38) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at productinventoryAPI.ProductServiceImpl$$EnhancerBySpringCGLIB$$4f4c0888.createProduct(<generated>) ~[classes/:na]
+	at productinventoryAPI.ProductController.addProduct(ProductController.java:64) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90) ~[na:1.8.0]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55) ~[na:1.8.0]
+	at java.lang.reflect.Method.invoke(Method.java:508) ~[na:1.8.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) ~[spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:215) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.1.RELEASE.jar:5.1.1.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [na:1.8.0]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:812) [na:2.9 (12-19-2018)]
+
+2021-04-19 14:44:40.451  INFO 24652 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 24652 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 14:44:40.459  INFO 24652 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 14:44:42.418  INFO 24652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 14:44:42.547  INFO 24652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118ms. Found 1 repository interfaces.
+2021-04-19 14:44:43.267  INFO 24652 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ac669626] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 14:44:49.341  INFO 24652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 14:44:49.376  INFO 24652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 14:44:49.376  INFO 24652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 14:44:49.388  INFO 24652 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 14:44:49.649  INFO 24652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 14:44:49.650  INFO 24652 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9082 ms
+2021-04-19 14:44:49.732  INFO 24652 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 14:44:49.732  INFO 24652 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 14:44:49.733  INFO 24652 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 14:44:49.733  INFO 24652 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 14:44:49.733  INFO 24652 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 14:44:49.734  INFO 24652 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 14:44:49.914  INFO 24652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 14:44:50.123  INFO 24652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 14:44:50.224  INFO 24652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 14:44:50.344  INFO 24652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 14:44:50.346  INFO 24652 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 14:44:50.591  INFO 24652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 14:44:50.834  INFO 24652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 14:44:51.942  INFO 24652 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@c195f5fa'
+2021-04-19 14:44:51.947  INFO 24652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-19 14:44:52.861  INFO 24652 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40d07932, org.springframework.security.web.context.SecurityContextPersistenceFilter@4af80d2a, org.springframework.security.web.header.HeaderWriterFilter@d91a9329, org.springframework.security.web.authentication.logout.LogoutFilter@1fd7e5e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@cb9b6d0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f9cf4a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7518bbfd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8b2a33d6, org.springframework.security.web.session.SessionManagementFilter@6e8d6374, org.springframework.security.web.access.ExceptionTranslationFilter@e23754e1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ec169ecb]
+2021-04-19 14:44:53.183  INFO 24652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 14:44:53.269  WARN 24652 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 14:44:53.755  INFO 24652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9432 (http) with context path ''
+2021-04-19 14:44:53.759  INFO 24652 --- [main] p.ProductInventoryApplication            : Started ProductInventoryApplication in 14.08 seconds (JVM running for 15.613)
+2021-04-19 14:45:02.673  INFO 24652 --- [http-nio-9432-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 14:45:02.674  INFO 24652 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-19 14:45:02.693  INFO 24652 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2021-04-19 14:58:44.866  INFO 16600 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 16600 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 14:58:44.872  INFO 16600 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 14:58:46.413  INFO 16600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 14:58:46.519  INFO 16600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 1 repository interfaces.
+2021-04-19 14:58:47.243  INFO 16600 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5b3c6b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 14:58:53.290  INFO 16600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 14:58:53.322  INFO 16600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 14:58:53.323  INFO 16600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 14:58:53.337  INFO 16600 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 14:58:53.600  INFO 16600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 14:58:53.601  INFO 16600 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8619 ms
+2021-04-19 14:58:53.696  INFO 16600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 14:58:53.697  INFO 16600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 14:58:53.697  INFO 16600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 14:58:53.698  INFO 16600 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 14:58:53.698  INFO 16600 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 14:58:53.699  INFO 16600 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 14:58:53.880  INFO 16600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 14:58:54.096  INFO 16600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 14:58:54.198  INFO 16600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 14:58:54.341  INFO 16600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 14:58:54.343  INFO 16600 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 14:58:54.588  INFO 16600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 14:58:54.834  INFO 16600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 14:58:56.461  INFO 16600 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3ed7233f'
+2021-04-19 14:58:56.466  INFO 16600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-19 14:58:57.614  INFO 16600 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79b1a84a, org.springframework.security.web.context.SecurityContextPersistenceFilter@cfa8c5f2, org.springframework.security.web.header.HeaderWriterFilter@7543711b, org.springframework.security.web.authentication.logout.LogoutFilter@61d8cbf7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ce32f0d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dff9edbd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49fbb60, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26e75319, org.springframework.security.web.session.SessionManagementFilter@551435b4, org.springframework.security.web.access.ExceptionTranslationFilter@b7b79b09, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1db1684e]
+2021-04-19 14:58:58.008  INFO 16600 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 14:58:58.102  WARN 16600 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 14:58:58.622  INFO 16600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9432 (http) with context path ''
+2021-04-19 14:58:58.627  INFO 16600 --- [main] p.ProductInventoryApplication            : Started ProductInventoryApplication in 14.498 seconds (JVM running for 16.095)
+2021-04-19 15:04:30.375  INFO 16600 --- [http-nio-9432-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 15:04:30.376  INFO 16600 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-19 15:04:30.399  INFO 16600 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2021-04-19 15:05:14.993  INFO 16600 --- [http-nio-9432-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-04-19 15:06:29.857  INFO 368 --- [main] p.ProductInventoryApplication            : Starting ProductInventoryApplication on VW10A15056 with PID 368 (C:\Workspaces\ASC_08_14\productinventoryAPI\target\classes started by a305149 in C:\Workspaces\ASC_08_14\productinventoryAPI)
+2021-04-19 15:06:29.868  INFO 368 --- [main] p.ProductInventoryApplication            : No active profile set, falling back to default profiles: default
+2021-04-19 15:06:31.415  INFO 368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-19 15:06:31.534  INFO 368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107ms. Found 1 repository interfaces.
+2021-04-19 15:06:32.219  INFO 368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$756b868a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-19 15:06:38.244  INFO 368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9432 (http)
+2021-04-19 15:06:38.278  INFO 368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-19 15:06:38.279  INFO 368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2021-04-19 15:06:38.296  INFO 368 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\IBM\WAS85\java_1.8_64\jre\bin\compressedrefs;C:\IBM\WAS85\java_1.8_64\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Tools\Ruby\bin;C:\Program Files (x86)\Actian\Zen\bin\;C:\Program Files\Actian\Zen\bin\;C:\Program Files\Java\jdk1.8.0_161\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files (x86)\PFG Common Files\Dependent DLLs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Tools\apache-maven-3.5.2\bin;C:\PROGRA~1\IBM\SQLLIB\BIN;C:\PROGRA~1\IBM\SQLLIB\FUNCTION;C:\PROGRA~1\IBM\SQLLIB\SAMPLES\REPL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Tools\curl-7.46.0-win64\bin;C:\Program Files\nodejs\;C:\Tools\Python27;C:\Tools\Python27\scripts;C:\Tools\Python27\lib\site-packages;C:\Users\A305149\AppData\Local\Microsoft\WindowsApps;C:\Users\A305149\AppData\Roaming\npm;.]
+2021-04-19 15:06:38.615  INFO 368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-19 15:06:38.615  INFO 368 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8628 ms
+2021-04-19 15:06:38.694  INFO 368 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-04-19 15:06:38.694  INFO 368 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-04-19 15:06:38.695  INFO 368 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2021-04-19 15:06:38.695  INFO 368 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2021-04-19 15:06:38.695  INFO 368 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-04-19 15:06:38.696  INFO 368 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2021-04-19 15:06:38.895  INFO 368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-19 15:06:39.117  INFO 368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-19 15:06:39.226  INFO 368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-04-19 15:06:39.336  INFO 368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2021-04-19 15:06:39.338  INFO 368 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-04-19 15:06:39.567  INFO 368 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-04-19 15:06:39.814  INFO 368 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-19 15:06:41.481  INFO 368 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@56bda649'
+2021-04-19 15:06:41.487  INFO 368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-19 15:06:42.467  INFO 368 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@478262ab, org.springframework.security.web.context.SecurityContextPersistenceFilter@10990fe8, org.springframework.security.web.header.HeaderWriterFilter@46f6a98d, org.springframework.security.web.authentication.logout.LogoutFilter@a409ff45, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e8d516ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54a7ab35, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b8fee1c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eeaeb4b7, org.springframework.security.web.session.SessionManagementFilter@f4942646, org.springframework.security.web.access.ExceptionTranslationFilter@e87e943c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30c9b124]
+2021-04-19 15:06:42.956  INFO 368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 15:06:43.052  WARN 368 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 15:06:43.473  INFO 368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9432 (http) with context path ''
+2021-04-19 15:06:43.477  INFO 368 --- [main] p.ProductInventoryApplication            : Started ProductInventoryApplication in 14.406 seconds (JVM running for 15.786)
+2021-04-19 15:06:49.569  INFO 368 --- [http-nio-9432-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 15:06:49.570  INFO 368 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-19 15:06:49.593  INFO 368 --- [http-nio-9432-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2021-04-19 15:07:30.747  INFO 368 --- [http-nio-9432-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

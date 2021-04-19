@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: productinventoryAPI
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: a305149
+Implementation-Vendor-Id: com.restcrud
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/productinventoryAPI
+Created-By: Maven Integration for Eclipse
+
